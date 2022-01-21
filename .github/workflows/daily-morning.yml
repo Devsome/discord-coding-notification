@@ -4,7 +4,7 @@ on:
     - cron: 0 9 * * 1-5
 name: Workdays Morning
 jobs:
-  weekly-news:
+  workdays-morning:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
