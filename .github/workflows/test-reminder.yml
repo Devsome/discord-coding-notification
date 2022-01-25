@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron: * * * * *
+    - cron: */2 * * * *
 name: Test Reminder
 jobs:
   newsletter-reminder:
