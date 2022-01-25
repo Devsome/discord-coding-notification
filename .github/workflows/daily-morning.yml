@@ -14,7 +14,7 @@ jobs:
           webhook_id: ${{ secrets.WORKDAYS_ID }}
           webhook_token: ${{ secrets.WORKDAYS_TOKEN }}
           username: "Guten Morgen"
-          avatar_url: "./images/avatar.png"
+          avatar_url: "/images/avatar.png"
           message: |
             Ich wünsche euch allen ein wunderschönen Guten Morgen!
             (Hier Tollas Ü40 Bild einfügen)

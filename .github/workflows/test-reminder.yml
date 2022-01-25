@@ -15,6 +15,7 @@ jobs:
           webhook_token: ${{ secrets.TEST_TOKEN }}
           color: "#fcc200"
           username: "Test Reminder"
+          avatar_url: "/images/avatar.png"
           message: |
             Nachricht Test
 
