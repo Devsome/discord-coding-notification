@@ -1,6 +1,7 @@
 on:
+  workflow_dispatch:
   schedule:
-    - cron: 0 9 * * 1-5
+    - cron: '0 9 * * 1-5'
 name: Workdays Morning
 jobs:
   workdays-morning:

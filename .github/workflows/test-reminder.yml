@@ -1,7 +1,7 @@
 on:
   workflow_dispatch:
   schedule:
-    - cron: */2 * * * *
+    - cron: '*/3 * * * *'
 name: Test Reminder
 jobs:
   newsletter-reminder:
