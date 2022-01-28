@@ -14,8 +14,7 @@ jobs:
         name: Fetch random google image
         run: ./scripts/random-google-image.sh
         shell: bash
-      - uses: actions/checkout@master
-        name: Workdays Morning
+      - name: Workdays Morning
         uses: appleboy/discord-action@master
         with:
           webhook_id: ${{ secrets.WORKDAYS_ID }}
