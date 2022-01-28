@@ -5,4 +5,4 @@ LEN=$(echo $RESULT | jq ".image_results | length")
 OFFSET=$(echo $(($RANDOM % $LEN)))
 LINK=$(echo $RESULT | jq ".image_results[$OFFSET].sourceUrl")
 echo "IMAGEURL=$LINK" >> $GITHUB_ENV
-
+echo "image url: $LINK"
