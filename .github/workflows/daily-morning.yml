@@ -12,6 +12,8 @@ jobs:
       - uses: actions/checkout@master
       - name: Install jq
         run: sudo apt-get install -y jq
+      - name: Make script executable
+        run: chmod +x ./scripts/random-google-image.sh
       - id: loadimg
         name: Fetch random google image
         run: ./scripts/random-google-image.sh
