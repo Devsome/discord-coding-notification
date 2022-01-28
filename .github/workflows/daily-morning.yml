@@ -25,4 +25,5 @@ jobs:
           webhook_token: ${{ secrets.WORKDAYS_TOKEN }}
           username: "Guten Morgen"
           avatar_url: "https://raw.githubusercontent.com/Devsome/discord-coding-notification/main/images/avatar.png"
-          message: Ich wünsche euch allen ein wunderschönen Guten Morgen! ${{ env.IMAGEURL }}
+          message: Ich wünsche euch allen ein wunderschönen Guten Morgen!
+          file: ${{ env.IMAGEURL }}
