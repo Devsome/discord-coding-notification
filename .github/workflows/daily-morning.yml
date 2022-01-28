@@ -10,6 +10,8 @@ jobs:
       imageUrl: ${{ steps.loadimg.outputs.imageUrl }}
     steps:
       - uses: actions/checkout@master
+      - name: Install jq
+        run: sudo apt-get install -y jq
       - id: loadimg
         name: Fetch random google image
         run: ./scripts/random-google-image.sh
