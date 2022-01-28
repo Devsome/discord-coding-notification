@@ -6,9 +6,15 @@ name: Workdays Morning
 jobs:
   workdays-morning:
     runs-on: ubuntu-latest
+    outputs:
+      imageUrl: ${{ steps.loadimg.outputs.imageUrl }}
     steps:
+      - id: loadimg
+        name: Fetch random google image
+        run: ./scripts/random-google-image.sh
+        shell: bash
       - uses: actions/checkout@master
-      - name: Workdays Morning
+        name: Workdays Morning
         uses: appleboy/discord-action@master
         with:
           webhook_id: ${{ secrets.WORKDAYS_ID }}
@@ -18,3 +24,4 @@ jobs:
           message: |
             Ich wünsche euch allen ein wunderschönen Guten Morgen!
             (Hier Tollas Ü40 Bild einfügen)
+            $ {{ steps.loadimg.outputs.imageUrl }}
