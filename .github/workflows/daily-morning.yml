@@ -9,18 +9,21 @@ jobs:
     outputs:
       imageUrl: ${{ steps.loadimg.outputs.imageUrl }}
     steps:
+      - uses: actions/checkout@master
+      - name: Install jq
+        run: sudo apt-get install -y jq
+      - name: Make script executable
+        run: chmod +x ./scripts/random-google-image.sh
       - id: loadimg
         name: Fetch random google image
         run: ./scripts/random-google-image.sh
         shell: bash
-      - uses: actions/checkout@master
-        name: Workdays Morning
+      - name: Workdays Morning
         uses: appleboy/discord-action@master
         with:
           webhook_id: ${{ secrets.WORKDAYS_ID }}
           webhook_token: ${{ secrets.WORKDAYS_TOKEN }}
           username: "Guten Morgen"
           avatar_url: "https://raw.githubusercontent.com/Devsome/discord-coding-notification/main/images/avatar.png"
-          file: ${{ steps.loadimg.outputs.imageUrl }}
-          message: |
-            Ich wünsche euch allen ein wunderschönen Guten Morgen!
+          message: Ich wünsche euch allen ein wunderschönen Guten Morgen!
+          file: ${{ env.IMAGEFILE }}
