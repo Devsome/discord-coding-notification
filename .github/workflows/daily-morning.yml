@@ -23,5 +23,4 @@ jobs:
           avatar_url: "https://raw.githubusercontent.com/Devsome/discord-coding-notification/main/images/avatar.png"
           message: |
             Ich wünsche euch allen ein wunderschönen Guten Morgen!
-            (Hier Tollas Ü40 Bild einfügen)
             $ {{ steps.loadimg.outputs.imageUrl }}
