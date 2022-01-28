@@ -9,6 +9,7 @@ jobs:
     outputs:
       imageUrl: ${{ steps.loadimg.outputs.imageUrl }}
     steps:
+      - uses: actions/checkout@master
       - id: loadimg
         name: Fetch random google image
         run: ./scripts/random-google-image.sh
