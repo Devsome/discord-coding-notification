@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       imageUrl: ${{ steps.loadimg.outputs.imageUrl }}
+    env:
+      ZENSERP_API_KEY: ${{ secrets.ZENSERP_API_KEY }}
     steps:
       - uses: actions/checkout@master
       - name: Install jq
