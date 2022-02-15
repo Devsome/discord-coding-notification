@@ -1,6 +1,6 @@
 #!/bin/bash
 
-RESULT=$(curl "https://app.zenserp.com/api/v2/search?apikey=$ZENSERP_API_KEY&q=Guten%20Morgen&tbm=isch&gl=DE")
+RESULT=$(curl "https://app.zenserp.com/api/v2/search?apikey=$ZENSERP_API_KEY&q=guten+morgen+bilder+jpeg&tbm=isch&gl=DE")
 LEN=$(echo $RESULT | jq ".image_results | length")
 OFFSET=$(echo $(($RANDOM % $LEN)))
 LINK=$(echo $RESULT | jq ".image_results[$OFFSET].sourceUrl")
