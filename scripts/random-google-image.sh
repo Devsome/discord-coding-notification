@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # We stick to jpeg images because some "sourceUrl"s do not contain a file extension
-IMAGE_FILE_EXTENSION=jpeg
+IMAGE_FILE_EXTENSION=jpg
 
 # Get search results via the API
 # Search term: "guten morgen grüße filetype:jpeg"
-SEARCH_RESULTS_JSON=$(curl "https://app.zenserp.com/api/v2/search?apikey=$ZENSERP_API_KEY&q=guten%20morgen%20gr%C3%BC%C3%9Fe%20filetype%3A$IMAGE_FILE_EXTENSION&tbm=isch&gl=DE")
+SEARCH_RESULTS_JSON=$(curl "https://app.zenserp.com/api/v2/search?apikey=$ZENSERP_API_KEY&q=Guten%20Morgen%20Cringe%20\"jpg\"&tbm=isch")
 
 # Get the number of search results 
 NUM_SEARCH_RESULTS=$(echo $SEARCH_RESULTS_JSON | jq ".image_results | length")
